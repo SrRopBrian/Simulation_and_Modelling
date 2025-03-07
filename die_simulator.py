@@ -25,14 +25,14 @@ for _ in range(1000):
 
 # Compute probabilities
 total_rolls = sum(frequencies)
-probabilities = [(freq / total_rolls) * 100 for freq in frequencies]
+percentage = [(freq / total_rolls) * 100 for freq in frequencies]
 
 # Print results table
 print("+-------+-----------+-------------+")
-print("|  Face | Frequency | Probability |")
+print("|  Face | Frequency | Percentage |")
 print("+-------+-----------+-------------+")
-for i, (freq, prob) in enumerate(zip(frequencies, probabilities), start=1):
-    print(f"|   {i}   |    {freq}    |   {prob:.1f}%     |")
+for i, (freq, percent) in enumerate(zip(frequencies, percentage), start=1):
+    print(f"|   {i}   |    {freq}    |   {percent:.1f}%     |")
 print("+-------+-----------+-------------+")
-print(f"| Total |    {total_rolls}   |   {sum(probabilities):.1f}%    |")
+print(f"| Total |    {total_rolls}   |   {sum(percentage):.1f}%    |")
 print("+-------+-----------+-------------+")
